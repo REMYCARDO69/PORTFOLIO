@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for enhanced professionalism */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .navbar {
+            transition: background-color 0.3s ease;
+        }
+        .navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="navbar fixed w-full z-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#home" class="text-2xl font-bold text-indigo-600">John Doe</a>
+                <div class="flex items-center space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-600 px-3 py-2 font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 px-3 py-2 font-medium">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-indigo-600 px-3 py-2 font-medium">Skills</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-indigo-600 px-3 py-2 font-medium">Portfolio</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 to-blue-500 text-white">
+        <div class="text-center px-4 fade-in">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">John Doe</h1>
+            <p class="text-xl md:text-2xl mb-6">Web Developer | Programmer | Network Engineer | Graphic Designer</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#portfolio" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-indigo-100 transition">View Portfolio</a>
+                <a href="#contact" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 fade-in">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/3">
+                    <img src="my .jpg" alt="Profile Image" class="rounded-lg shadow-lg mx-auto">
+                </div>
+                <div class="md:w-2/3 fade-in">
+                    <p class="text-lg mb-4">
+                        With over 1 year of experience, I am a dedicated professional specializing in web development, programming, network engineering, and graphic design. My expertise lies in crafting responsive, user-centric websites, developing efficient applications, designing secure network architectures, and creating visually compelling designs.
+                    </p>
+                    <p class="text-lg mb-6">
+                        I am committed to delivering innovative solutions that blend technical precision with creative excellence. Let's collaborate to transform your vision into reality.
+                    </p>
+                    <a href="resume.pdf" download class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 fade-in">My Expertise</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center fade-in">
+                    <h3 class="text-xl font-semibold mb-3">Web Development</h3>
+                    <p class="text-gray-600">HTML5, CSS3, JavaScript, React, Tailwind CSS, Node.js, Next.js</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center fade-in">
+                    <h3 class="text-xl font-semibold mb-3">Programming</h3>
+                    <p class="text-gray-600">Python, Java, C++, SQL, TypeScript, Git, Docker</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center fade-in">
+                    <h3 class="text-xl font-semibold mb-3">Network Engineering</h3>
+                    <p class="text-gray-600">Cisco CCNA, TCP/IP, VPN, AWS, Firewalls, SDN</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center fade-in">
+                    <h3 class="text-xl font-semibold mb-3">Graphic Design</h3>
+                    <p class="text-gray-600">Adobe Photoshop, Illustrator, Figma, UI/UX, Branding</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 fade-in">Selected Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-item bg-gray-50 rounded-lg shadow-md overflow-hidden fade-in">
+                    <img src="image.png" alt="Project 1" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">A scalable, responsive e-commerce website built with React, Node.js, and Stripe integration.</p>
+                        <a href="#" class="text-indigo-600 hover:underline font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="portfolio-item bg-gray-50 rounded-lg shadow-md overflow-hidden fade-in">
+                    <img src="image copy.png" alt="Project 2" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Network Monitoring Tool</h3>
+                        <p class="text-gray-600 mb-4">A Python-based dashboard for real-time network monitoring using Cisco APIs and Flask.</p>
+                        <a href="#" class="text-indigo-600 hover:underline font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="portfolio-item bg-gray-50 rounded-lg shadow-md overflow-hidden fade-in">
+                    <img src="image copy 2.png" alt="Project 3" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Brand Identity Design</h3>
+                        <p class="text-gray-600 mb-4">A complete branding package including logo, typography, and assets designed in Adobe Illustrator.</p>
+                        <a href="#" class="text-indigo-600 hover:underline font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 fade-in">Let's Connect</h2>
+            <div class="max-w-lg mx-auto">
+                <div class="mb-6">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" class="mt-1 p-3 w-full border rounded-lg focus:ring-indigo-500 focus:border-indigo-500" placeholder="Your Name">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" class="mt-1 p-3 w-full border rounded-lg focus:ring-indigo-500 focus:border-indigo-500" placeholder="Your Email">
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea id="message" rows="5" class="mt-1 p-3 w-full border rounded-lg focus:ring-indigo-500 focus:border-indigo-500" placeholder="Your Message"></textarea>
+                </div>
+                <button onclick="alert('Message sent successfully!')" class="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">&copy; 2025 John Doe. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-indigo-400">LinkedIn</a>
+                <a href="#" class="hover:text-indigo-400">GitHub</a>
+                <a href="#" class="hover:text-indigo-400">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(element => observer.observe(element));
+    </script>
+</body>
+</html>
